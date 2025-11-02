@@ -14,5 +14,8 @@ console.log(myCreatedDate2.getDate());
 console.log(myCreatedDate2.getMonth());
 console.log(myCreatedDate2.getDay());
 console.log(myCreatedDate2.getFullYear());
+myCreatedDate.toLocaleString('default', {
+    weekday: "long",
+})
 
 

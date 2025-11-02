@@ -9,6 +9,7 @@
     # pkgs.go
     # pkgs.python311
     # pkgs.python311Packages.pip
+    pkgs.neofetch
     pkgs.nodejs_20
     pkgs.nodePackages.nodemon
   ];
@@ -20,6 +21,7 @@
     extensions = [
       # "vscodevim.vim"
     ];
+
 
     # Enable previews
     previews = {
