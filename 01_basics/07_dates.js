@@ -10,4 +10,9 @@ let myCreatedDate2 = new Date(2025, 10, 25); // Month is 0-indexed (0 = January,
 console.log(myCreatedDate.toDateString());
 console.log(myCreatedDate2.toDateString());
 console.log(myCreatedDate.getTime());
+console.log(myCreatedDate2.getDate());
+console.log(myCreatedDate2.getMonth());
+console.log(myCreatedDate2.getDay());
+console.log(myCreatedDate2.getFullYear());
+
 
