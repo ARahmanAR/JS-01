@@ -10,8 +10,8 @@
 	"debug.console.fontFamily": "'Cascadia Code NF', 'Cascadia Code', Menlo, Consolas, 'Liberation Mono', monospace",
 	"terminal.integrated.gpuAcceleration": "auto",
 	"editor.cursorBlinking": "expand",
-	"editor.cursorStyle": "block",
-	"editor.cursorWidth": 1,
+	"editor.cursorStyle": "line",
+	"editor.cursorWidth": 5,
 	"workbench.colorCustomizations": {
 		"editorCursor.background": "#00000000",
         "editorCursor.foreground": "#90EE90"
