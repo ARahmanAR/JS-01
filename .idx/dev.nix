@@ -9,5 +9,6 @@
   packages = [
     pkgs.neofetch
     pkgs.nodejs_20
+    pkgs.docker
   ];
 }
