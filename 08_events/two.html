@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // Example anonymous timeout (can't be cleared without storing its id)
+    const anonId = setTimeout(() => {
+        console.log('hello');
+    }, 2000);
+
+    // Store timeout IDs so we can cancel them with clearTimeout
+    const timeoutId = setTimeout(() => {
+        console.log('This will not run if stopped');
+    }, 4000);
+
+    const changeH1 = () => {
+        document.querySelector('h1').textContent = 'Changed!';
+    };
+
+    const changeH1Id = setTimeout(changeH1, 5000);
+
+    // Stop button should clear the timers using their IDs (not the functions)
+    document.getElementById('stop').addEventListener('click', () => {
+        clearTimeout(anonId);
+        clearTimeout(timeoutId);
+        clearTimeout(changeH1Id);
+        console.log('stopped');
+    });
+</script>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li class="js">JavaScript</li>
+    </ul>
+</body>
+<script>
+    function addLanuage(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`;
+        document.querySelector('.language').appendChild(li);
+    }
+    addLanuage('Python');
+    addLanuage('C++');
+    addLanuage('Java');
+
+
+    function addOptiLanguage(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(li);
+    }
+
+    addOptiLanguage('Go');
+    addOptiLanguage('Rust');
+
+    // Edit
+    const secondLanguage = document.querySelector("li:nth-child(2)")
+    // secondLanguage.innerHTML = "TypeScript";
+    const newli = document.createElement('li');
+    newli.textContent = "TypeScript";
+    secondLanguage.replaceWith(newli);
+    //edit
+    const firstLanguage = document.querySelector("li:nth-child(1)");
+    firstLanguage.outerHTML = '<li>Dart</li>';
+
+    // Remove
+    const LastLanguage = document.querySelector("li:last-child");
+    LastLanguage.remove();
+</script>
+</html>
